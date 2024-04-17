@@ -13,8 +13,9 @@
 #images {
     padding: 10px;
     margin: -10px;
-    border: solid 0px #888;
+    border: solid 5px #ffefef;
     background-color: #fed0d0;
+    margin-bottom: 10px;
     
   }
 h1 {
@@ -39,4 +40,13 @@ width: 29%;
 }
 p {
   text-align: center;
+}
+.minor-section {
+  background-color: palevioletred;
+  border-width: 4px;
+  border-color: #fed0d0;
+
+}
+a {
+  color: #ffffff;
 }

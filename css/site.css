@@ -34,3 +34,8 @@ h1 {
   border: solid 0cap #888;
   background-color: #fff4f8;
 }
+a {
+  font-family: 'simply rounded';
+  font-size: 20pt;
+  color:black;
+}
