@@ -39,3 +39,8 @@ a {
   font-size: 20pt;
   color:black;
 }
+#me {
+  margin-left: 50px;
+  width: 200px;
+  border: solid 1cap #ffd1d6; 
+}
