@@ -1,6 +1,28 @@
 // index.js - purpose and description here
-// Author: Your Name
-// Date:
+// Author: Natalie Peterson
+// Date: 20 April 2024
+
+// Creating a pong game:
+  // Generate a game space
+    // Generate score board
+    // Generate Boundary lines
+    // Generate center divider
+  // Decide if there is one player or two players
+    // If one player, then second paddle is played by robot
+  // Display round number
+  // Generate 2 paddles, one on each side 
+    //One red
+    // One blue
+  // Paddle controlled by player's mouse movements
+  // Generate ball
+    // Computer evaluate ball position
+    // Computer decided where to move paddle 
+    // Ball starts moving in right direction
+    // ball bounces off paddle
+  // If paddle misses ball end round
+    // Point goes to opposite player
+  // After third round, player with most points wins
+
 
 // Constants
 
