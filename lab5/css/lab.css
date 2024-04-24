@@ -5,5 +5,31 @@
     padding: 10px;
     margin-bottom: 10px;
     border: solid 1px #888;
-    background-color: #DDD8C4;
+    background-color: #fff4f8;
   }
+#ss {
+    width: 500px;
+  }
+.minor-section {
+  width: 500px;
+}
+.results {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #888;
+  background-color: #fff4f8;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#car {
+  width: 500px;
+}
+.car {
+float: right;
+margin-right: 30px;
+border: dotted 15px #fff4f8;
+}
+.me {
+  width: 500px
+}

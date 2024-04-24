@@ -10,6 +10,7 @@ body {
 /* we can have rules apply to multiple elements at the same time with commas */
 h1,h2,h3 {
   font-family: 'simply rounded';
+  text-align: center;
 }
 
 /* and we can have rules that overlap other rules, both take effect */
@@ -33,6 +34,9 @@ h1 {
   margin-bottom: 10px;
   border: solid 0cap #888;
   background-color: #fff4f8;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  
 }
 a {
   font-family: 'simply rounded';
