@@ -12,8 +12,7 @@ $(".minor-section").append("<button id='button-challenge'> make special </button
 
 // add a click listener to the button
 $("#button-challenge").click(function(){
-    
     //add link to the minor section class
-   $(".minor-section").toggleClass("special");
+   $(this).parent().toggleClass("special");
 
 });
