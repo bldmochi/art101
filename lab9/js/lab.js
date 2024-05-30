@@ -7,12 +7,16 @@
    Date: 2024
 */
 
-// add button in challenge section
-$(".minor-section").append("<button id='button-challenge'> make special </button>");
+$(".minor-section").each(function(index) {
+   $(this).append("<button id='button-challenge-" + index + "'> make special </button>");
+});
+
+
 
 // add a click listener to the button
-$("#button-challenge").click(function(){
+$(".minor-section button").click(function(){
     //add link to the minor section class
    $(this).parent().toggleClass("special");
-
+   
+   console.log("click");
 });
