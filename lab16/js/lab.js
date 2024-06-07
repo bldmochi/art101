@@ -2,48 +2,47 @@
 // Author: Natalie Peterson
 // Date: 5 June 2024
 
-// Constants
-const URL = "https://xkcd.com/info.0.json"
-// Functions
+
+
+const URL = "https://xkcd.com/info.0.json";
+
+// create a button listener
 $("#button").click(function(){
-  //call ajax
+  console.log("Click");
+  // call ajax
   $.ajax(comicObj);
-  
 })
-// Using the core $.ajax() method
-var comicObj = {
 
-  // The URL for the request (from the api docs)
-  url: "URL",
-  // The data to send (will be converted to a query string)
-  // data: { 
-  //         // here is where any data required by the api 
-  //         //   goes (check the api docs)
-  //         id: 123,
-  //         api_key: "blahblahblah",
-  //       },
-  // Whether this is a POST or GET request
+
+// construct ajax object
+const comicObj = {
+  url: URL,
+  // data: {
+
+  //  },
   type: "GET",
-  // The type of data we expect back
-  dataType : "json",
-  // What do we do when the api call is successful
-  //   all the action goes in here
-  success: function(data) {
-      // do stuff
-      const title = comicObj.title;
-      const image = comicObj.image;
-      const alt = comicObj.alt
-    
-        console.log(data);
-
-        $("#output").html("<h3>" + title);
-        $("#output").append("<img src='" + image + "' />")
-        $("#output").append("<p class='atrb'>" + alt);
-  
-  },
-  // What we do if the api call fails
-  error: function (jqXHR, textStatus, errorThrown) { 
-      // do stuff
-      console.log("Error:", textStatus, errorThrown);
-  }
+  dataType: "json",
+  success: ajaxSuccess,
+  error: ajaxError
 }
+
+function ajaxSuccess(data){
+  console.log("Results:", data);
+   // parse json
+   const comicObj = data[0];
+   const title = data.title;
+   const imageURL = data.img;
+   const alt = data.alt;
+   //const date = comicObj.date;
+ 
+   // put stuff in output div
+   $("#output").html("<h2>" + title);
+   $("#output").append("<img src='" + imageURL + "' />")
+   $("#output").append("<p class='alt'>" + alt);
+   //$("#output").append("<p class='description'>" + description);
+}
+
+function ajaxError(request,error){
+      console.log("Oops:", request, error);
+}
+
